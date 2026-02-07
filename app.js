@@ -1,123 +1,177 @@
+// Year in footer
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-const dict = {
+// Content dictionary (EN/ES)
+const copy = {
   en: {
-    nav_approach: "Approach",
-    nav_focus: "Focus",
-    nav_principles: "Principles",
+    nav_about: "About",
+    nav_strategy: "Strategy",
     nav_contact: "Contact",
-    hero_title: "Real estate investments, curated with rigor.",
-    hero_subtitle:
-      "We invest primarily in value-add and opportunistic strategies—combining disciplined underwriting with hands-on execution.",
-    hero_cta_primary: "Start a conversation",
-    hero_cta_secondary: "Explore our approach",
-    hero_disclaimer:
-      "For informational purposes only. Not an offer to sell or a solicitation to buy securities.",
-    approach_title: "Approach",
-    approach_intro:
-      "Trealva targets real estate opportunities where active management, repositioning, and operational improvements can unlock value.",
-    approach_card1_title: "Value-add",
-    approach_card1_body:
-      "Renovations, re-leasing, capex programs, and operating optimization to improve cashflow and resilience.",
-    approach_card2_title: "Opportunistic",
-    approach_card2_body:
-      "Complex situations requiring speed, structuring, and experienced execution—always with a risk-first mindset.",
-    approach_card3_title: "Discipline",
-    approach_card3_body:
-      "Conservative underwriting, downside scenarios, and aligned incentives from diligence through disposition.",
-    focus_title: "Focus",
-    focus_left_title: "What we look for",
-    focus_li1: "Strong fundamentals and clear value creation plan",
-    focus_li2: "Operational upside and measurable execution levers",
-    focus_li3: "Capital structure opportunities",
-    focus_li4: "Aligned local partners and specialist operators",
-    focus_right_title: "How we add value",
-    focus_li5: "Hands-on asset management and reporting cadence",
-    focus_li6: "Tenant strategy, renovation scope, vendor control",
-    focus_li7: "Risk management and governance",
-    focus_li8: "Exit planning from day one",
-    principles_title: "Principles",
-    pill_1: "Trust",
-    pill_2: "Discretion",
-    pill_3: "Excellence",
-    pill_4: "Strategic growth",
-    pill_5: "Rigorous curation",
+
+    hero_tagline_en: "Creating Value Through Vision",
+    hero_sub: "Value-add and opportunistic real estate investments across Spain, Mexico, and the United States.",
+    hero_cta: "Get in touch",
+    hero_cta2: "View strategy",
+    scroll: "Scroll",
+
+    about_title: "About",
+    about_body:
+      "Trealva is an entrepreneurial real estate investment firm focused on creating value through value-add and opportunistic investments across Spain, Mexico, and the United States. " +
+      "The firm specializes in identifying underperforming, mispriced, or transitional assets and unlocking their potential through active asset management, operational improvements, and strategic repositioning. " +
+      "Trealva takes a highly involved, execution-driven approach, combining local market insight with flexible capital and fast decision-making. " +
+      "With a cross-border platform and an owner-operator mindset, Trealva partners with investors to pursue complex opportunities and generate compelling, risk-adjusted returns in markets where experience and agility matter most.",
+
+    geo_title: "Geographies",
+    geo_value: "Spain · Mexico · United States",
+    mindset_title: "Mindset",
+    mindset_value: "Owner-operator · Execution-driven",
+    speed_title: "Decision-making",
+    speed_value: "Flexible capital · Fast decisions",
+
+    strategy_title: "Strategy",
+    strategy_sub:
+      "We pursue complex opportunities with rigorous underwriting, hands-on execution, and alignment across the full investment lifecycle.",
+
+    card1_title: "Value-Add Investments",
+    card1_body: "Renovations, lease-up, capex programs, and operating optimization to unlock value.",
+    card2_title: "Opportunistic Investments",
+    card2_body: "Complex situations requiring speed, structuring, and experienced execution.",
+    card3_title: "Active Asset Management",
+    card3_body: "Hands-on asset oversight, reporting cadence, and KPI-driven operations.",
+    card4_title: "Strategic Repositioning",
+    card4_body: "Re-tenanting, repositioning, and execution plans designed for resilient outcomes.",
+
+    diff1: "Owner-operator mindset",
+    diff2: "Flexible capital",
+    diff3: "Fast decision-making",
+
     contact_title: "Contact",
-    contact_intro:
-      "Share your project or investment inquiry. We’ll respond promptly and discreetly.",
-    contact_card_title: "Email",
-    contact_card_body: "Replace with your preferred inbox.",
-    contact_card2_title: "Location",
-    contact_card2_body: "Add city / country (optional)."
+    contact_sub: "Share your project or investment inquiry. We’ll respond promptly and discreetly.",
+    email_label: "Email",
+    markets_label: "Markets",
+    markets_value: "Spain · Mexico · United States",
+
+    footer_note: "All rights reserved."
   },
+
   es: {
-    nav_approach: "Enfoque",
-    nav_focus: "Tesis",
-    nav_principles: "Principios",
+    nav_about: "Nosotros",
+    nav_strategy: "Estrategia",
     nav_contact: "Contacto",
-    hero_title: "Inversión inmobiliaria, curada con rigor.",
-    hero_subtitle:
-      "Invertimos principalmente mediante estrategias value-add y oportunistas, combinando análisis disciplinado con ejecución práctica.",
-    hero_cta_primary: "Iniciar conversación",
-    hero_cta_secondary: "Conocer el enfoque",
-    hero_disclaimer:
-      "Solo con fines informativos. No constituye oferta de venta ni solicitud de compra de valores.",
-    approach_title: "Enfoque",
-    approach_intro:
-      "Trealva identifica oportunidades inmobiliarias donde la gestión activa, el reposicionamiento y mejoras operativas pueden detonar valor.",
-    approach_card1_title: "Value-add",
-    approach_card1_body:
-      "Renovaciones, re-lease, programas de capex y optimización operativa para fortalecer flujo y resiliencia.",
-    approach_card2_title: "Oportunista",
-    approach_card2_body:
-      "Situaciones complejas que requieren velocidad, estructuración y ejecución experta, siempre con mentalidad de control de riesgo.",
-    approach_card3_title: "Disciplina",
-    approach_card3_body:
-      "Modelos conservadores, escenarios a la baja e incentivos alineados desde la diligencia hasta la salida.",
-    focus_title: "Tesis",
-    focus_left_title: "Qué buscamos",
-    focus_li1: "Fundamentales sólidos y plan claro de creación de valor",
-    focus_li2: "Upside operativo y palancas medibles de ejecución",
-    focus_li3: "Oportunidades en estructura de capital",
-    focus_li4: "Socios locales alineados y operadores especialistas",
-    focus_right_title: "Cómo generamos valor",
-    focus_li5: "Asset management práctico y cadencia de reporteo",
-    focus_li6: "Estrategia comercial, alcance de obra y control de proveedores",
-    focus_li7: "Gestión de riesgos y gobernanza",
-    focus_li8: "Planeación de salida desde el día uno",
-    principles_title: "Principios",
-    pill_1: "Confianza",
-    pill_2: "Discreción",
-    pill_3: "Excelencia",
-    pill_4: "Crecimiento estratégico",
-    pill_5: "Curaduría rigurosa",
+
+    hero_tagline_en: "Creando Valor a Través de la Visión",
+    hero_sub: "Inversiones inmobiliarias value-add y oportunistas en España, México y Estados Unidos.",
+    hero_cta: "Contactar",
+    hero_cta2: "Ver estrategia",
+    scroll: "Desliza",
+
+    about_title: "Nosotros",
+    about_body:
+      "Trealva es una firma emprendedora de inversión inmobiliaria enfocada en crear valor mediante inversiones value-add y oportunistas en España, México y Estados Unidos. " +
+      "La firma se especializa en identificar activos con bajo desempeño, mal valorados o en transición, y en liberar su potencial a través de una gestión activa, mejoras operativas y reposicionamiento estratégico. " +
+      "Trealva adopta un enfoque altamente involucrado y orientado a la ejecución, combinando conocimiento local con capital flexible y toma de decisiones ágil. " +
+      "Con una plataforma transfronteriza y mentalidad de owner-operator, Trealva se asocia con inversionistas para perseguir oportunidades complejas y generar retornos atractivos ajustados por riesgo en mercados donde la experiencia y la agilidad marcan la diferencia.",
+
+    geo_title: "Geografías",
+    geo_value: "España · México · Estados Unidos",
+    mindset_title: "Mentalidad",
+    mindset_value: "Owner-operator · Enfoque a la ejecución",
+    speed_title: "Decisiones",
+    speed_value: "Capital flexible · Decisiones rápidas",
+
+    strategy_title: "Estrategia",
+    strategy_sub:
+      "Buscamos oportunidades complejas con análisis riguroso, ejecución práctica y alineación durante todo el ciclo de inversión.",
+
+    card1_title: "Inversiones Value-Add",
+    card1_body: "Remodelaciones, lease-up, capex y optimización operativa para detonar valor.",
+    card2_title: "Inversiones Oportunistas",
+    card2_body: "Situaciones complejas que requieren velocidad, estructuración y ejecución experta.",
+    card3_title: "Gestión Activa de Activos",
+    card3_body: "Supervisión práctica, cadencia de reporteo y operación guiada por KPIs.",
+    card4_title: "Reposicionamiento Estratégico",
+    card4_body: "Re-tenanting, reposicionamiento y planes de ejecución para resultados resilientes.",
+
+    diff1: "Mentalidad owner-operator",
+    diff2: "Capital flexible",
+    diff3: "Decisiones rápidas",
+
     contact_title: "Contacto",
-    contact_intro:
-      "Comparte tu proyecto o consulta de inversión. Responderemos con rapidez y discreción.",
-    contact_card_title: "Correo",
-    contact_card_body: "Sustituye por tu buzón preferido.",
-    contact_card2_title: "Ubicación",
-    contact_card2_body: "Añade ciudad / país (opcional)."
+    contact_sub: "Comparte tu proyecto o consulta de inversión. Responderemos con rapidez y discreción.",
+    email_label: "Correo",
+    markets_label: "Mercados",
+    markets_value: "España · México · Estados Unidos",
+
+    footer_note: "Todos los derechos reservados."
   }
 };
 
+// Apply language
 function setLang(lang) {
   document.documentElement.lang = lang;
+
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    if (dict[lang] && dict[lang][key]) el.textContent = dict[lang][key];
+    if (copy[lang] && copy[lang][key]) el.textContent = copy[lang][key];
   });
 
-  document.querySelectorAll(".lang__btn").forEach((btn) => {
-    btn.setAttribute("aria-pressed", btn.dataset.lang === lang ? "true" : "false");
+  // toggle pills
+  document.querySelectorAll(".lang__pill").forEach((pill) => {
+    pill.setAttribute("aria-pressed", pill.dataset.lang === lang ? "true" : "false");
   });
 
   localStorage.setItem("trealva_lang", lang);
 }
 
-document.querySelectorAll(".lang__btn").forEach((btn) => {
-  btn.addEventListener("click", () => setLang(btn.dataset.lang));
-});
+// Toggle language on click
+const langBtn = document.querySelector(".lang");
+if (langBtn) {
+  langBtn.addEventListener("click", () => {
+    const current = localStorage.getItem("trealva_lang") || "en";
+    setLang(current === "en" ? "es" : "en");
+  });
+}
 
+// Initialize language
 setLang(localStorage.getItem("trealva_lang") || "en");
+
+// Fade-in on scroll (IntersectionObserver)
+const reveals = document.querySelectorAll(".reveal");
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add("is-visible");
+    });
+  },
+  { threshold: 0.12 }
+);
+reveals.forEach((el) => io.observe(el));
+
+// Mobile menu
+const burger = document.querySelector(".burger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+function closeMenu() {
+  if (!burger || !mobileMenu) return;
+  mobileMenu.hidden = true;
+  burger.setAttribute("aria-expanded", "false");
+}
+
+if (burger && mobileMenu) {
+  burger.addEventListener("click", () => {
+    const isOpen = burger.getAttribute("aria-expanded") === "true";
+    burger.setAttribute("aria-expanded", String(!isOpen));
+    mobileMenu.hidden = isOpen;
+  });
+
+  // Close menu on link click
+  mobileMenu.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", closeMenu);
+  });
+}
+
+// Close menu on ESC
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeMenu();
+});
