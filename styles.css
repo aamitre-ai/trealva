@@ -40,16 +40,23 @@ body{
 
 .brand{ display:flex; align-items:center; gap:10px; text-decoration:none; }
 .brand__logo{
-  height:20px;
-  width:auto; /* keep proportions (no distortion) */
+  height:30px; /* bigger */
+  width:auto;
   display:block;
 }
 
-.nav{ display:flex; gap:18px; align-items:center; }
+.nav{ display:flex; gap:22px; align-items:center; }
 .nav__link{
-  font-size:14px;
+  font-size:16px;          /* bigger */
+  font-weight:600;         /* stronger */
   text-decoration:none;
-  opacity:.85;
+  opacity:.90;
+  padding:8px 10px;        /* larger click area */
+  border-radius:10px;
+}
+.nav__link:hover{
+  opacity:1;
+  background: rgba(12,42,68,.06);
 }
 .nav__link:hover{ opacity:1; }
 
@@ -158,7 +165,9 @@ body{
   background:rgba(255,255,255,.06);
 }
 .hero__logo{
-  height:28px; width:auto; display:block; /* keep proportions */
+  height:44px; /* bigger and more visible */
+  width:auto;
+  display:block;
 }
 
 .h1{
