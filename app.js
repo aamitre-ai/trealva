@@ -9,7 +9,7 @@ const copy = {
     nav_strategy:"Strategy",
     nav_contact:"Contact",
     hero_title:"Creating Value Through Vision",
-    hero_sub:"Value-add and opportunistic real estate investments.",
+    hero_sub:"Value-add and opportunistic real estate investments across Spain, Mexico, and the United States.",
     about_title:"About",
     about_body:
       "<p>Trealva is an entrepreneurial real estate investment firm focused on creating value through value-add and opportunistic investments across Spain, Mexico, and the United States.</p>" +
@@ -26,7 +26,7 @@ const copy = {
     nav_strategy:"Estrategia",
     nav_contact:"Contacto",
     hero_title:"Creando Valor a Través de la Visión",
-    hero_sub:"Inversiones inmobiliarias value-add y oportunistas.",
+    hero_sub:"Inversiones inmobiliarias value-add y oportunistas en España, México y Estados Unidos.",
     about_title:"Nosotros",
     about_body:
       "<p>Trealva es una firma emprendedora de inversión inmobiliaria enfocada en crear valor mediante inversiones value-add y oportunistas en España, México y Estados Unidos.</p>" +
