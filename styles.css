@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #F0EAE0;
+  color: #292A26;
+}
+
+header {
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
