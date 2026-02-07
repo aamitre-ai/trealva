@@ -224,7 +224,12 @@ body{
 /* Sections */
 .section{ padding:72px 0; }
 .section--alt{ background: rgba(173,167,150,.16); }
-
+.aboutText p{
+  margin: 0 0 14px;
+}
+.aboutText p:last-child{
+  margin-bottom: 0;
+}
 .container{
   width:min(var(--max), 92vw);
   margin:0 auto;
