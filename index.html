@@ -2,21 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trealva</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trealva | Real Estate Investments</title>
+  <meta name="description" content="Trealva is an investment firm focused on value-add and opportunistic real estate strategies." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <header>
-    <img src="assets/logo.png" alt="Trealva logo" style="height:40px;">
+  <header class="topbar" aria-label="Top navigation">
+    <a class="brand" href="#top" aria-label="Trealva home">
+      <img class="brand__logo" src="assets/logo.png" alt="Trealva" />
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="#approach" data-i18n="nav_approach">Approach</a>
+      <a href="#focus" data-i18n="nav_focus">Focus</a>
+      <a href="#principles" data-i18n="nav_principles">Principles</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+
+    <div class="lang" aria-label="Language switch">
+      <button class="lang__btn" type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button class="lang__btn" type="button" data-lang="es" aria-pressed="false">ES</button>
+    </div>
   </header>
 
-  <section class="hero">
-    <img src="assets/hero.jpg" alt="Hero image">
-    <h1>Real estate investments, curated with rigor.</h1>
-    <p>Value-add and opportunistic real estate strategies.</p>
-  </section>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <img class="hero__bg" src="assets/hero.jpg" alt="" />
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <div class="hero__mark">
+          <img class="hero__logo" src="assets/logo.png" alt="Trealva" />
+        </div>
+
+        <h1 class="display" data-i18n="hero_title">
+          Real estate investments, curated with rigor.
+        </h1>
+
+        <p class="lead" data-i18n="hero_subtitle">
+          We invest primarily in value-add and opportunistic strategies—combining disciplined underwriting with hands-on execution.
+        </p>
+
+        <div class="cta">
+          <a class="btn btn--primary" href="#contact" data-i18n="hero_cta_primary">Start a conversation</a>
+          <a class="btn btn--ghost" href="#approach" data-i18n="hero_cta_secondary">Explore our approach</a>
+        </div>
+
+        <p class="disclaimer" data-i18n="hero_disclaimer">
+          For informational purposes only. Not an offer to sell or a solicitation to buy securities.
+        </p>
+      </div>
+    </section>
+
+    <!-- APPROACH -->
+    <section class="section" id="approach">
+      <div class="container">
+        <h2 class="section__title" data-i18n="approach_title">Approach</h2>
+        <p class="section__intro" data-i18n="approach_intro">
+          Trealva targets real estate opportunities where active management, repositioning, and operational improvements can unlock value.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3 data-i18n="approach_card1_title">Value-add</h3>
+            <p data-i18n="approach_card1_body">
+              Renovations, re-leasing, capex programs, and operating optimization to improve cashflow and resilience.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="approach_card2_title">Opportunistic</h3>
+            <p data-i18n="approach_card2_body">
+              Complex situations requiring speed, structuring, and experienced execution—always with a risk-first mindset.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 data-i18n="approach_card3_title">Discipline</h3>
+            <p data-i18n="approach_card3_body">
+              Conservative underwriting, downside scenarios, and aligned incentives from diligence through disposition.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOCUS -->
+    <section class="section section--alt" id="focus">
+      <div class="container">
+        <h2 class="section__title" data-i18n="focus_title">Focus</h2>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3 data-i18n="focus_left_title">What we look for</h3>
+            <ul class="list">
+              <li data-i18n="focus_li1">Strong fundamentals and clear value creation plan</li>
+              <li data-i18n="focus_li2">Operational upside and measurable execution levers</li>
+              <li data-i18n="focus_li3">Capital structure opportunities</li>
+              <li data-i18n="focus_li4">Aligned local partners and specialist operators</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 data-i18n="focus_right_title">How we add value</h3>
+            <ul class="list">
+              <li data-i18n="focus_li5">Hands-on asset management and reporting cadence</li>
+              <li data-i18n="focus_li6">Tenant strategy, renovation scope, vendor control</li>
+              <li data-i18n="focus_li7">Risk management and governance</li>
+              <li data-i18n="focus_li8">Exit planning from day one</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRINCIPLES -->
+    <section class="section" id="principles">
+      <div class="container">
+        <h2 class="section__title" data-i18n="principles_title">Principles</h2>
+        <div class="pillrow" role="list">
+          <span class="pill" role="listitem" data-i18n="pill_1">Trust</span>
+          <span class="pill" role="listitem" data-i18n="pill_2">Discretion</span>
+          <span class="pill" role="listitem" data-i18n="pill_3">Excellence</span>
+          <span class="pill" role="listitem" data-i18n="pill_4">Strategic growth</span>
+          <span class="pill" role="listitem" data-i18n="pill_5">Rigorous curation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <h2 class="section__title" data-i18n="contact_title">Contact</h2>
+        <p class="section__intro" data-i18n="contact_intro">
+          Share your project or investment inquiry. We’ll respond promptly and discreetly.
+        </p>
+
+        <div class="contact">
+          <div class="card">
+            <h3 data-i18n="contact_card_title">Email</h3>
+            <p class="muted" data-i18n="contact_card_body">Replace with your preferred inbox.</p>
+            <p><a class="link" href="mailto:contacto@trealva.com">contacto@trealva.com</a></p>
+          </div>
+
+          <div class="card">
+            <h3 data-i18n="contact_card2_title">Location</h3>
+            <p class="muted" data-i18n="contact_card2_body">Add city / country (optional).</p>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <span>© <span id="year"></span> Trealva</span>
+        </footer>
+      </div>
+    </section>
+  </main>
 
   <script src="app.js"></script>
 </body>
