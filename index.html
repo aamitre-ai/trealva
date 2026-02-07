@@ -4,185 +4,88 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Trealva | Real Estate Investments</title>
-  <meta name="description" content="Trealva is an entrepreneurial real estate investment firm focused on value-add and opportunistic strategies across Spain, Mexico, and the United States." />
 
-  <!-- Body font (Work Sans) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- Optional display font fallback (Minion Pro Display is usually licensed & locally installed) -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="header" role="banner">
-    <a class="brand" href="#top" aria-label="Trealva home">
-      <img class="brand__logo" src="assets/logo.png" alt="Trealva" />
-    </a>
+<header class="header">
+  <a class="brand" href="#top">
+    <img src="assets/logo.png" class="brand__logo" alt="Trealva">
+  </a>
 
-    <nav class="nav" aria-label="Primary navigation">
-      <a class="nav__link" href="#about" data-i18n="nav_about">About</a>
-      <a class="nav__link" href="#strategy" data-i18n="nav_strategy">Strategy</a>
-      <a class="nav__link" href="#contact" data-i18n="nav_contact">Contact</a>
-    </nav>
+  <nav class="nav">
+    <a href="#about" data-i18n="nav_about">About</a>
+    <a href="#strategy" data-i18n="nav_strategy">Strategy</a>
+    <a href="#contact" data-i18n="nav_contact">Contact</a>
+  </nav>
 
-    <div class="header__actions">
-      <button class="lang" type="button" aria-label="Toggle language">
-        <span class="lang__pill" data-lang="en" aria-pressed="true">EN</span>
-        <span class="lang__pill" data-lang="es" aria-pressed="false">ES</span>
-      </button>
+  <button class="lang" id="langToggle">EN / ES</button>
+</header>
 
-      <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <img src="assets/logo.png" class="hero__logo" alt="Trealva">
+
+      <h1 data-i18n="hero_title">Creating Value Through Vision</h1>
+      <p data-i18n="hero_sub">Value-add and opportunistic real estate investments.</p>
     </div>
-  </header>
+  </section>
 
-  <!-- Mobile menu -->
-  <div class="mobile" id="mobileMenu" hidden>
-    <nav class="mobile__nav" aria-label="Mobile navigation">
-      <a class="mobile__link" href="#about" data-i18n="nav_about">About</a>
-      <a class="mobile__link" href="#strategy" data-i18n="nav_strategy">Strategy</a>
-      <a class="mobile__link" href="#contact" data-i18n="nav_contact">Contact</a>
-    </nav>
-  </div>
-
-  <main id="top">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="hero__overlay" aria-hidden="true"></div>
-
-      <div class="hero__content">
-        <div class="hero__logoWrap">
-          <img class="hero__logo" src="assets/logo.png" alt="Trealva" />
-        </div>
-
-        <h1 class="h1" data-i18n="hero_tagline_en">
-          Creating Value Through Vision
-        </h1>
-
-        <p class="hero__sub" data-i18n="hero_sub">
-          Value-add and opportunistic real estate investments across Spain, Mexico, and the United States.
-        </p>
-
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#contact" data-i18n="hero_cta">Get in touch</a>
-          <a class="btn btn--ghost" href="#strategy" data-i18n="hero_cta2">View strategy</a>
-        </div>
-
-        <div class="scroll" aria-hidden="true">
-          <span class="scroll__dot"></span>
-          <span class="scroll__text" data-i18n="scroll">Scroll</span>
-        </div>
+  <!-- ABOUT -->
+  <section class="section reveal" id="about">
+    <div class="container twoCol">
+      <div>
+        <h2 data-i18n="about_title">About</h2>
+        <div class="aboutText" data-i18n="about_body"></div>
       </div>
-    </section>
 
-    <!-- About -->
-    <section class="section reveal" id="about">
-      <div class="container twoCol">
-        <div>
-          <h2 class="h2" data-i18n="about_title">About</h2>
-          <div class="p aboutText" data-i18n="about_body"></div>
-        </div>
-
-        <aside class="facts">
-          <div class="fact">
-            <div class="fact__k" data-i18n="geo_title">Geographies</div>
-            <div class="fact__v" data-i18n="geo_value">Spain · Mexico · United States</div>
-          </div>
-          <div class="fact">
-            <div class="fact__k" data-i18n="mindset_title">Mindset</div>
-            <div class="fact__v" data-i18n="mindset_value">Owner-operator · Execution-driven</div>
-          </div>
-          <div class="fact">
-            <div class="fact__k" data-i18n="speed_title">Decision-making</div>
-            <div class="fact__v" data-i18n="speed_value">Flexible capital · Fast decisions</div>
-          </div>
-        </aside>
+      <div class="facts">
+        <div class="fact">Spain · Mexico · United States</div>
+        <div class="fact">Owner-Operator Mindset</div>
+        <div class="fact">Flexible Capital · Fast Decisions</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Strategy -->
-    <section class="section section--alt reveal" id="strategy">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 class="h2" data-i18n="strategy_title">Strategy</h2>
-          <p class="p subtle" data-i18n="strategy_sub">
-            <!-- filled by JS -->
-          </p>
-        </div>
+  <!-- STRATEGY -->
+  <section class="section section--blue reveal" id="strategy">
+    <div class="container">
+      <h2 data-i18n="strategy_title">Strategy</h2>
 
-        <div class="cards">
-          <article class="card">
-            <h3 class="h3" data-i18n="card1_title">Value-Add Investments</h3>
-            <p class="p" data-i18n="card1_body">Renovations, lease-up, capex programs, and operating optimization to unlock value.</p>
-          </article>
-
-          <article class="card">
-            <h3 class="h3" data-i18n="card2_title">Opportunistic Investments</h3>
-            <p class="p" data-i18n="card2_body">Complex situations requiring speed, structuring, and experienced execution.</p>
-          </article>
-
-          <article class="card">
-            <h3 class="h3" data-i18n="card3_title">Active Asset Management</h3>
-            <p class="p" data-i18n="card3_body">Hands-on asset oversight, reporting cadence, and KPI-driven operations.</p>
-          </article>
-
-          <article class="card">
-            <h3 class="h3" data-i18n="card4_title">Strategic Repositioning</h3>
-            <p class="p" data-i18n="card4_body">Re-tenanting, repositioning, and execution plans designed for resilient outcomes.</p>
-          </article>
-        </div>
-
-        <div class="chips">
-          <span class="chip" data-i18n="diff1">Owner-operator mindset</span>
-          <span class="chip" data-i18n="diff2">Flexible capital</span>
-          <span class="chip" data-i18n="diff3">Fast decision-making</span>
-        </div>
+      <div class="cards">
+        <div class="card" data-i18n="card1">Value-Add Investments</div>
+        <div class="card" data-i18n="card2">Opportunistic Investments</div>
+        <div class="card" data-i18n="card3">Active Asset Management</div>
+        <div class="card" data-i18n="card4">Strategic Repositioning</div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section class="section reveal" id="contact">
-      <div class="container contact">
-        <div>
-          <h2 class="h2" data-i18n="contact_title">Contact</h2>
-          <p class="p subtle" data-i18n="contact_sub">
-            Share your project or investment inquiry. We’ll respond promptly and discreetly.
-          </p>
+  <!-- CONTACT -->
+  <section class="section reveal" id="contact">
+    <div class="container contact">
+      <h2 data-i18n="contact_title">Contact</h2>
+      <p>Email</p>
+      <a class="contactEmail" href="mailto:alejandro@trealva.com">
+        alejandro@trealva.com
+      </a>
 
-          <div class="contactBox">
-            <div class="contactRow">
-              <span class="contactLabel" data-i18n="email_label">Email</span>
-              <a class="contactLink" href="mailto:contacto@trealva.com">contacto@trealva.com</a>
-            </div>
-            <div class="contactRow">
-              <span class="contactLabel" data-i18n="markets_label">Markets</span>
-              <span class="contactText" data-i18n="markets_value">Spain · Mexico · United States</span>
-            </div>
-          </div>
-        </div>
+      <footer>
+        © <span id="year"></span> Trealva
+      </footer>
+    </div>
+  </section>
+</main>
 
-        <footer class="footer">
-          <div class="footer__line"></div>
-          <div class="footer__meta">
-            <span>© <span id="year"></span> Trealva</span>
-            <span class="dot">•</span>
-            <span data-i18n="footer_note">All rights reserved.</span>
-          </div>
-        </footer>
-      </div>
-    </section>
-  </main>
-
-  <script src="app.js"></script>
-
-  <!-- Hero background image (kept in CSS for cover behavior) -->
-  <style>
-    .hero__bg { background-image: url("assets/hero.jpg"); }
-  </style>
+<script src="app.js"></script>
 </body>
 </html>
