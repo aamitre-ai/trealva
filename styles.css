@@ -207,3 +207,6 @@ footer{
   .hero__logo{ height:72px; }
   .header{ padding:14px 18px; }
 }
+.centerTitle{
+  text-align:center;
+}
