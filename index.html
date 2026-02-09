@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Trealva | Real Estate Investments</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,7 +14,7 @@
 
 <body>
   <!-- HEADER -->
-  <header class="header">
+  <header class="header" role="banner">
     <a class="brand" href="#top" aria-label="Trealva home">
       <img src="assets/logo.png" class="brand__logo" alt="Trealva">
     </a>
@@ -33,9 +32,9 @@
 
   <main id="top">
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" aria-label="Hero">
       <img src="assets/hero.jpg" class="hero__image" alt="Trealva real estate">
-      <div class="hero__overlay"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
 
       <div class="hero__content">
         <img src="assets/logo.png" class="hero__logo" alt="Trealva">
@@ -47,7 +46,7 @@
       </div>
     </section>
 
-    <!-- ABOUT (CENTERED, NO RIGHT BOX) -->
+    <!-- ABOUT (CENTERED) -->
     <section class="section reveal" id="about">
       <div class="container aboutCenter">
         <h2 data-i18n="about_title">About</h2>
@@ -74,7 +73,7 @@
       <div class="container contact">
         <h2 data-i18n="contact_title">Contact</h2>
 
-        <!-- NEW LINE -->
+        <!-- MUST SHOW -->
         <p class="contactSubtitle" data-i18n="contact_enquiries">Contact us for enquiries</p>
 
         <a class="contactEmail" href="mailto:alejandro@trealva.com">
