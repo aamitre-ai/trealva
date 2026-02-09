@@ -40,7 +40,7 @@ const copy = {
       "<p>Trealva es una firma emprendedora de inversión inmobiliaria enfocada en crear valor mediante inversiones value-add y oportunistas en España, México y Estados Unidos.</p>" +
       "<p>La firma se especializa en identificar activos subvaluados o en transición y liberar su potencial mediante gestión activa, mejoras operativas y reposicionamiento estratégico. Con mentalidad owner-operator y plataforma transfronteriza, Trealva busca retornos atractivos ajustados por riesgo.</p>",
 
-    strategy_title:"Estrategia",
+    strategy_title:"Estrategias",
     card1:"Inversiones Value-Add",
     card2:"Inversiones Oportunistas",
     card3:"Gestión Activa",
