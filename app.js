@@ -54,13 +54,16 @@ const copy = {
 function applyLang(){
   document.querySelectorAll("[data-i18n]").forEach(el=>{
     const key = el.dataset.i18n;
-    if(key === "about_body") el.innerHTML = copy[lang][key];
-    else el.textContent = copy[lang][key];
+    const val = copy[lang]?.[key];
+    if (!val) return; // don't blank out content if missing key
+
+    if(key === "about_body") el.innerHTML = val;
+    else el.textContent = val;
   });
 }
 
 document.getElementById("langToggle").onclick = ()=>{
-  lang = lang === "en" ? "es" : "en";
+  lang = (lang === "en") ? "es" : "en";
   applyLang();
 };
 
@@ -71,5 +74,6 @@ const obs = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting) e.target.classList.add("visible");
   });
-});
+}, { threshold: 0.1 });
+
 document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
