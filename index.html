@@ -14,86 +14,80 @@
 </head>
 
 <body>
-<header class="header">
-  <a class="brand" href="#top">
-    <!-- HEADER LOGO (BIG & CLEAR) -->
-    <img src="assets/logo.png" class="brand__logo" alt="Trealva">
-  </a>
+  <!-- HEADER -->
+  <header class="header">
+    <a class="brand" href="#top" aria-label="Trealva home">
+      <img src="assets/logo.png" class="brand__logo" alt="Trealva">
+    </a>
 
-  <nav class="nav">
-    <a href="#about" data-i18n="nav_about">About</a>
-    <a href="#strategy" data-i18n="nav_strategy">Strategy</a>
-    <a href="#contact" data-i18n="nav_contact">Contact</a>
-  </nav>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#strategy" data-i18n="nav_strategy">Strategy</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
 
-  <button class="lang" id="langToggle">EN / ES</button>
-</header>
+    <button class="lang" id="langToggle" type="button" aria-label="Toggle language">
+      EN / ES
+    </button>
+  </header>
 
-<main id="top">
-  <!-- HERO -->
-  <section class="hero">
-    <!-- HERO IMAGE (FORCED VISIBLE) -->
-    <img src="assets/hero.jpg" class="hero__image" alt="Trealva real estate">
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <img src="assets/hero.jpg" class="hero__image" alt="Trealva real estate">
+      <div class="hero__overlay"></div>
 
-    <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <img src="assets/logo.png" class="hero__logo" alt="Trealva">
 
-    <div class="hero__content">
-      <!-- HERO LOGO (VERY BIG) -->
-      <img src="assets/logo.png" class="hero__logo" alt="Trealva">
+        <h1 data-i18n="hero_title">Creating Value Through Vision</h1>
+        <p data-i18n="hero_sub">
+          Value-add and opportunistic real estate investments across Spain, Mexico, and the United States.
+        </p>
+      </div>
+    </section>
 
-      <h1 data-i18n="hero_title">Creating Value Through Vision</h1>
-      <p data-i18n="hero_sub">
-        Value-add and opportunistic real estate investments across Spain, Mexico, and the United States.
-      </p>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="section reveal" id="about">
-    <div class="container twoCol">
-      <div>
+    <!-- ABOUT (CENTERED, NO RIGHT BOX) -->
+    <section class="section reveal" id="about">
+      <div class="container aboutCenter">
         <h2 data-i18n="about_title">About</h2>
         <div class="aboutText" data-i18n="about_body"></div>
       </div>
+    </section>
 
-      <div class="facts">
-        <div class="fact">Spain · Mexico · United States</div>
-        <div class="fact">Owner-Operator Mindset</div>
-        <div class="fact">Flexible Capital · Fast Decisions</div>
+    <!-- STRATEGY -->
+    <section class="section section--blue reveal" id="strategy">
+      <div class="container">
+        <h2 data-i18n="strategy_title">Strategy</h2>
+
+        <div class="cards">
+          <div class="card" data-i18n="card1">Value-Add Investments</div>
+          <div class="card" data-i18n="card2">Opportunistic Investments</div>
+          <div class="card" data-i18n="card3">Active Asset Management</div>
+          <div class="card" data-i18n="card4">Strategic Repositioning</div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- STRATEGY -->
-  <section class="section section--blue reveal" id="strategy">
-    <div class="container">
-      <h2 data-i18n="strategy_title">Strategy</h2>
+    <!-- CONTACT -->
+    <section class="section reveal" id="contact">
+      <div class="container contact">
+        <h2 data-i18n="contact_title">Contact</h2>
 
-      <div class="cards">
-        <div class="card" data-i18n="card1">Value-Add Investments</div>
-        <div class="card" data-i18n="card2">Opportunistic Investments</div>
-        <div class="card" data-i18n="card3">Active Asset Management</div>
-        <div class="card" data-i18n="card4">Strategic Repositioning</div>
+        <!-- NEW LINE -->
+        <p class="contactSubtitle" data-i18n="contact_enquiries">Contact us for enquiries</p>
+
+        <a class="contactEmail" href="mailto:alejandro@trealva.com">
+          alejandro@trealva.com
+        </a>
+
+        <footer>
+          © <span id="year"></span> Trealva
+        </footer>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- CONTACT -->
-  <section class="section reveal" id="contact">
-    <div class="container contact">
-      <h2 data-i18n="contact_title">Contact</h2>
-
-      <a class="contactEmail" href="mailto:alejandro@trealva.com">
-        alejandro@trealva.com
-      </a>
-
-      <footer>
-        © <span id="year"></span> Trealva
-      </footer>
-    </div>
-  </section>
-</main>
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
