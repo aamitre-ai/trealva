@@ -6,19 +6,13 @@
   <title>Trealva</title>
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; font-family: 'Work Sans', sans-serif; background: #000; color: #fff; overflow: hidden; }
+    html, body { height: 100%; background: #000; overflow: hidden; }
     .hero-bg { position: fixed; inset: 0; z-index: 0; background-image: url('https://images.unsplash.com/photo-1547995886-6dc09384c6e6?w=1600&q=80'); background-size: cover; background-position: center; }
-    .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.58); z-index: 1; }
-    .logo { position: fixed; top: 36px; left: 44px; z-index: 10; }
-    .logo img { height: 100px; width: auto; display: block; }
-    .content { position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 24px; }
-    .content__label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 22px; }
-    .content__title { font-size: clamp(1.8rem, 4.5vw, 3.5rem); font-weight: 300; letter-spacing: 0.01em; line-height: 1.2; color: #fff; }
+    .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 1; }
+    .logo { position: fixed; inset: 0; z-index: 10; display: flex; align-items: center; justify-content: center; }
+    .logo img { width: clamp(200px, 40vw, 480px); height: auto; }
   </style>
 </head>
 <body>
@@ -26,10 +20,6 @@
   <div class="overlay"></div>
   <div class="logo">
     <img src="https://raw.githubusercontent.com/aamitre-ai/trealva/main/assets/trealva-logo-white.png" alt="Trealva">
-  </div>
-  <div class="content">
-    <p class="content__label">Inversiones</p>
-    <h1 class="content__title">Valor, disciplina<br>y largo plazo.</h1>
   </div>
 </body>
 </html>
