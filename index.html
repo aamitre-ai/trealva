@@ -1,94 +1,35 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Trealva | Real Estate Investments</title>
-
+  <title>Trealva</title>
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; font-family: 'Work Sans', sans-serif; background: #000; color: #fff; overflow: hidden; }
+    .hero-bg { position: fixed; inset: 0; z-index: 0; background-image: url('https://images.unsplash.com/photo-1547995886-6dc09384c6e6?w=1600&q=80'); background-size: cover; background-position: center; }
+    .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.58); z-index: 1; }
+    .logo { position: fixed; top: 36px; left: 44px; z-index: 10; }
+    .logo img { height: 100px; width: auto; display: block; }
+    .content { position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 24px; }
+    .content__label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 22px; }
+    .content__title { font-size: clamp(1.8rem, 4.5vw, 3.5rem); font-weight: 300; letter-spacing: 0.01em; line-height: 1.2; color: #fff; }
+  </style>
 </head>
-
 <body>
-  <!-- HEADER -->
-  <header class="header" role="banner">
-    <a class="brand" href="#top" aria-label="Trealva home">
-      <img src="assets/trealva-logo-white.png" class="brand__logo" alt="Trealva">
-    </a>
-
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="#about" data-i18n="nav_about">About</a>
-      <a href="#strategies" data-i18n="nav_strategies">Strategies</a>
-      <a href="#contact" data-i18n="nav_contact">Contact</a>
-    </nav>
-
-    <button class="lang" id="langToggle" type="button" aria-label="Toggle language">
-      EN / ES
-    </button>
-  </header>
-
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero" aria-label="Hero">
-      <img src="assets/hero.jpg" class="hero__image" alt="Trealva real estate">
-      <div class="hero__overlay" aria-hidden="true"></div>
-
-      <div class="hero__content">
-        <h1 data-i18n="hero_title">Creating Value Through Vision</h1>
-        <p data-i18n="hero_sub">
-          Value-add and opportunistic real estate investments across Spain, Mexico, and the United States.
-        </p>
-      </div>
-    </section>
-
-    <!-- ABOUT (CENTERED) -->
-    <section class="section reveal" id="about">
-      <div class="container aboutCenter">
-        <h2 data-i18n="about_title">About</h2>
-        <div class="aboutText" data-i18n="about_body"></div>
-      </div>
-    </section>
-
-    <!-- STRATEGY -->
-    <section class="section section--blue reveal" id="strategies">
-      <div class="container">
-        <h2 data-i18n="strategies_title" class="centerTitle">Strategies</h2>
-
-        <div class="cards">
-          <div class="card" data-i18n="card1">Value-Add Investments</div>
-          <div class="card" data-i18n="card2">Opportunistic Investments</div>
-          <div class="card" data-i18n="card3">Active Asset Management</div>
-          <div class="card" data-i18n="card4">Strategic Repositioning</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section reveal" id="contact">
-      <div class="container contact">
-        <h2 data-i18n="contact_title">Contact</h2>
-
-        <!-- MUST SHOW -->
-        <p class="contactSubtitle" data-i18n="contact_enquiries">Contact us for enquiries</p>
-
-        <a class="contactEmail" href="mailto:alejandro@trealva.com">
-          alejandro@trealva.com
-        </a>
-
-        <footer>
-          © <span id="year"></span> Trealva
-        </footer>
-      </div>
-    </section>
-  </main>
-
-  <script src="app.js"></script>
+  <div class="hero-bg"></div>
+  <div class="overlay"></div>
+  <div class="logo">
+    <img src="https://raw.githubusercontent.com/aamitre-ai/trealva/main/assets/trealva-logo-white.png" alt="Trealva">
+  </div>
+  <div class="content">
+    <p class="content__label">Inversiones</p>
+    <h1 class="content__title">Valor, disciplina<br>y largo plazo.</h1>
+  </div>
 </body>
 </html>
