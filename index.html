@@ -1,25 +1,197 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Trealva</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; background: #000; overflow: hidden; }
-    .hero-bg { position: fixed; inset: 0; z-index: 0; background-image: url('https://images.unsplash.com/photo-1547995886-6dc09384c6e6?w=1600&q=80'); background-size: cover; background-position: center; }
-    .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 1; }
-    .logo { position: fixed; inset: 0; z-index: 10; display: flex; align-items: center; justify-content: center; }
-    .logo img { width: clamp(200px, 40vw, 480px); height: auto; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trealva — Estrategias inmobiliarias de valor</title>
+<meta name="description" content="Trealva implementa estrategias inmobiliarias de valor: le damos nueva vida a los inmuebles y encontramos su best & highest use para generar valor real.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div class="hero-bg"></div>
-  <div class="overlay"></div>
-  <div class="logo">
-    <img src="https://raw.githubusercontent.com/aamitre-ai/trealva/main/assets/trealva-logo-white.png" alt="Trealva">
+
+<!-- NAV -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#inicio" class="logo-link" aria-label="Trealva — inicio">
+      <img src="assets/logo/trealva-logo-white.png" alt="Trealva" class="logo logo-light">
+      <img src="assets/logo/trealva-logo-navy.png" alt="Trealva" class="logo logo-dark">
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#que-somos">Qué somos</a>
+      <a href="#problema">Qué resolvemos</a>
+      <a href="#a-quien-servimos">A quién servimos</a>
+      <a href="#como-trabajamos">Cómo trabajamos</a>
+      <a href="#hablemos" class="nav-cta">Hablemos</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg">
+    <img src="assets/img/hero-revive.jpg" alt="Interior histórico bañado en luz natural, muros con textura" loading="eager">
+    <div class="hero-scrim"></div>
+  </div>
+  <div class="hero-content">
+    <p class="eyebrow eyebrow-light">Trealva · Estrategias inmobiliarias de valor</p>
+    <h1>Dar nueva vida<br> a los inmuebles.</h1>
+    <p class="hero-sub">Revivimos los muros. Revivimos la historia.</p>
+    <p class="hero-desc">Identificamos el potencial dormido en cada activo y lo convertimos en resultado real — con visión, disciplina y una estrategia de valor pensada para transformar el medio que nos rodea.</p>
+    <div class="hero-actions">
+      <a href="#hablemos" class="btn btn-primary">Hablemos</a>
+      <a href="#que-somos" class="btn btn-ghost">Qué somos ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUE SOMOS -->
+<section class="section" id="que-somos">
+  <div class="section-inner grid-2">
+    <div class="col-text">
+      <p class="eyebrow">Qué somos realmente</p>
+      <h2>No construimos desde cero.<br>Reimaginamos lo que ya existe.</h2>
+      <p class="body-lg">Trealva es una firma de estrategia inmobiliaria de valor. No compramos ladrillos: compramos potencial sin explotar. Cada muro que reactivamos, cada estructura que reposicionamos, tiene una historia — y nuestro trabajo es escribir su siguiente capítulo.</p>
+      <p class="pull-quote">"Cada muro tiene una historia. Nosotros le damos la que sigue."</p>
+    </div>
+    <div class="col-media">
+      <img src="assets/img/texture-plaster.jpg" alt="Textura de muro antiguo con luz cálida" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="section section-alt" id="problema">
+  <div class="section-inner grid-2 reverse">
+    <div class="col-media">
+      <img src="assets/img/renovation-loft.jpg" alt="Espacio en renovación con luz natural, listo para transformarse" loading="lazy">
+    </div>
+    <div class="col-text">
+      <p class="eyebrow">El problema</p>
+      <h2>Le damos un nuevo<br>propósito al inmobiliario.</h2>
+      <p class="body-lg">Gran parte del inventario inmobiliario existente está mal utilizado, subvalorado o simplemente detenido en el tiempo. La respuesta fácil es demoler y construir de nuevo. La nuestra es distinta: encontramos el propósito que ese activo todavía no ha cumplido, y lo llevamos ahí.</p>
+      <ul class="tag-list">
+        <li>Activos infrautilizados</li>
+        <li>Propósito perdido</li>
+        <li>Potencial dormido</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- A QUIEN SERVIMOS -->
+<section class="section" id="a-quien-servimos">
+  <div class="section-inner">
+    <div class="section-heading">
+      <p class="eyebrow">A quién servimos</p>
+      <h2>En la intersección entre lo que necesita<br>el cliente y lo que necesita el inmueble.</h2>
+    </div>
+    <div class="intersect-wrap">
+      <div class="intersect-diagram" aria-hidden="true">
+        <div class="circle circle-client"><span>Cliente</span></div>
+        <div class="circle circle-property"><span>Inmueble</span></div>
+        <div class="circle-label">TREALVA</div>
+      </div>
+      <p class="body-lg intersect-copy">No buscamos la salida fácil. Buscamos el <em>best &amp; highest use</em> del activo — el uso que genera el mayor valor posible, tanto para el inmueble como para quien lo posee. Exactamente ahí, en esa intersección, es donde trabajamos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMO TRABAJAMOS -->
+<section class="section section-alt" id="como-trabajamos">
+  <div class="section-inner">
+    <div class="section-heading">
+      <p class="eyebrow">Cómo trabajamos</p>
+      <h2>Un proceso, cuatro movimientos.</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-card">
+        <span class="process-num">01</span>
+        <h3>Identificar</h3>
+        <p>Evaluamos activos con potencial dormido: mal utilizados, subvalorados o fuera de foco.</p>
+      </div>
+      <div class="process-card">
+        <span class="process-num">02</span>
+        <h3>Evaluar</h3>
+        <p>Analizamos el best &amp; highest use: qué necesita el mercado, qué necesita el inmueble, qué necesita el cliente.</p>
+      </div>
+      <div class="process-card">
+        <span class="process-num">03</span>
+        <h3>Reposicionar</h3>
+        <p>Ejecutamos la estrategia de valor — uso, forma y propósito, alineados.</p>
+      </div>
+      <div class="process-card">
+        <span class="process-num">04</span>
+        <h3>Generar valor real</h3>
+        <p>El resultado no es solo un inmueble renovado. Es un activo que finalmente cumple su potencial.</p>
+      </div>
+    </div>
+    <div class="process-media">
+      <img src="assets/img/blueprint-hands.jpg" alt="Manos trazando un plano sobre una mesa de madera" loading="lazy">
+      <img src="assets/img/old-meets-new.jpg" alt="Edificio histórico junto a rascacielos moderno" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- HABLEMOS -->
+<section class="section contact-section" id="hablemos">
+  <div class="section-inner grid-2">
+    <div class="col-text">
+      <p class="eyebrow">Hablemos</p>
+      <h2>¿Tienes una propuesta<br>para Trealva?</h2>
+      <p class="body-lg">Ya sea que quieras invertir, traernos una propiedad o pipeline para evaluar, o proponer una alianza — este es el lugar para empezar la conversación.</p>
+      <p class="contact-email">alejandro@trealva.com</p>
+    </div>
+    <div class="col-form">
+      <form id="contactForm" class="contact-form">
+        <div class="field">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field">
+          <label for="reason">¿Qué nos traes?</label>
+          <select id="reason" name="reason" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option value="Invertir conmigo">Invertir conmigo</option>
+            <option value="Traer una propiedad o pipeline">Traer una propiedad o pipeline</option>
+            <option value="Proponer una alianza">Proponer una alianza</option>
+            <option value="Otro">Otro</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+        <p class="form-note">Al enviar se abrirá tu cliente de correo con el mensaje listo para alejandro@trealva.com</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <img src="assets/logo/trealva-logo-white.png" alt="Trealva" class="footer-logo">
+    <p class="footer-tagline">Revivimos los muros. Revivimos la historia.</p>
+    <div class="footer-meta">
+      <a href="mailto:alejandro@trealva.com">alejandro@trealva.com</a>
+      <span>© <span id="year"></span> Trealva</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
