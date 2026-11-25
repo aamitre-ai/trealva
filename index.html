@@ -1,197 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trealva — Estrategias inmobiliarias de valor</title>
-<meta name="description" content="Trealva implementa estrategias inmobiliarias de valor: le damos nueva vida a los inmuebles y encontramos su best & highest use para generar valor real.">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TREALVA Adquisiciones</title>
+<meta name="description" content="TREALVA adquiere y dirige empresas establecidas en el Valle de México, con capital propio y visión de largo plazo.">
+<meta property="og:title" content="TREALVA">
+<meta property="og:description" content="Damos continuidad a empresas mexicanas.">
+<link rel="icon" href="favicon-32x32.ico" sizes="32x32">
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="assets/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE  sobria, formal y discreta: una firma privada que habla poco y con cuidado
+   IDEA   el papel membretado de una firma: márgenes amplios, filetes finos, nada que sobre
+   PICTURE la tabla de Propuesta, con la columna TREALVA en azul marino, es la pieza central
+   COLOUR blanco, tinta azul marino TREALVA, gris piedra para texto secundario
+   TYPE   Source Serif 4 para títulos + Inter para texto
+   LAYOUT columna amplia alineada a la izquierda; secciones separadas por filetes */
+:root{color-scheme:light dark;--bg:light-dark(#ffffff,#0c1628);--ink:light-dark(#0f1f3a,#e9eef6);--soft:light-dark(#5a6577,#a7b2c4);--line:light-dark(#dde2ea,#24344f);--navy:#142a4c;--navyInk:#ffffff;--tint:light-dark(#f4f6f9,#111d33)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:clip}
+a{color:inherit}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:-.015em;margin:0;text-wrap:balance}
+.wrap{max-width:1120px;margin:0 auto;padding:0 max(5vw,20px)}
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;flex-wrap:wrap}
+.mark{font:600 21px/1 "Source Serif 4",Georgia,serif;letter-spacing:.22em;text-decoration:none}
+.logo{height:30px;width:auto;display:block}
+.logo.white{display:none}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .logo.navy{display:none}:root:not([data-theme=light]) .logo.white{display:block}}
+:root[data-theme=dark] .logo.navy{display:none}
+:root[data-theme=dark] .logo.white{display:block}
+footer .logo{height:22px}
+.links{display:flex;gap:4px 28px;flex-wrap:wrap;font-size:15px}
+.links a{text-decoration:none;color:var(--soft);padding:10px 0}
+.links a:hover{color:var(--ink)}
+a:focus-visible,.btn:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.hero{padding-top:clamp(72px,12vw,160px);padding-bottom:clamp(64px,9vw,120px)}
+.hero h1{font-size:clamp(38px,5.6vw,66px);line-height:1.05;max-width:20ch}
+.hero p{font-size:clamp(17px,1.6vw,20px);color:var(--soft);max-width:52ch;margin:28px 0 36px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 26px;background:var(--navy);color:var(--navyInk);text-decoration:none;font-weight:500;letter-spacing:.01em;border-radius:2px}
+.btn:hover{background:#1d3a66}
+:root[data-theme=dark] .btn{background:#e9eef6;color:#0f1f3a}
+section{border-top:1px solid var(--line);padding:clamp(56px,8vw,112px) 0}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 48px;margin-bottom:clamp(36px,5vw,56px)}
+.head h2{font-size:clamp(30px,3.6vw,44px);line-height:1.1}
+.head p{font-size:clamp(18px,1.7vw,21px);color:var(--soft);margin:6px 0 0;max-width:46ch;font-family:"Source Serif 4",Georgia,serif}
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,56px)}
+.three article{border-top:2px solid var(--ink);padding-top:22px}
+.three h3{font-size:22px;margin-bottom:12px}
+.three p{margin:0;color:var(--soft)}
+.cmp{width:100%;border-collapse:collapse;font-size:15.5px}
+.cmp th,.cmp td{text-align:left;vertical-align:top;padding:18px 20px;border-bottom:1px solid var(--line)}
+.cmp thead th{font:600 18px/1.25 "Source Serif 4",Georgia,serif;padding-top:22px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.cmp tbody th{font-weight:600;width:18%;padding-left:0}
+.cmp td{color:var(--soft);width:27%}
+.cmp .us{background:var(--navy);color:#fff}
+.cmp td.us{color:#dbe4f1}
+.cmp thead .us{border-radius:4px 4px 0 0}
+.cmp tbody tr:last-child .us{border-radius:0 0 4px 4px}
+.cmp tbody tr:last-child th,.cmp tbody tr:last-child td{border-bottom:0}
+.cmp .us{border-bottom-color:#2b4670}
+.cmp thead th:first-child{padding-left:0}
+.contact{text-align:center}
+.contact h2{font-size:clamp(32px,4.4vw,52px);line-height:1.1;max-width:20ch;margin:0 auto}
+.contact p{color:var(--soft);max-width:52ch;margin:22px auto 34px}
+.contact .mail{display:block;margin-top:22px;color:var(--soft);font-size:15.5px}
+footer{border-top:1px solid var(--line);padding:28px 0 36px;font-size:14px;color:var(--soft)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between;align-items:baseline}
+footer details{flex-basis:100%;max-width:78ch}
+footer summary{cursor:pointer;color:var(--ink);padding:6px 0}
+@media(max-width:860px){.head{grid-template-columns:minmax(0,1fr)}.three{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:720px){
+  .links a:not(:last-child){display:none}
+  .cmp thead{display:none}
+  .cmp,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block;width:auto}
+  .cmp tr{padding:22px 0;border-bottom:1px solid var(--line)}
+  .cmp tbody tr:last-child{border-bottom:0}
+  .cmp tbody th{width:auto;padding:0 0 10px;border:0;font:600 19px/1.25 "Source Serif 4",Georgia,serif}
+  .cmp td{width:auto;padding:10px 14px;border:0}
+  .cmp td::before{content:attr(data-l);display:block;font-weight:600;color:var(--ink);font-size:14px;margin-bottom:2px}
+  .cmp td.us{border-radius:4px}
+  .cmp td.us::before{color:#fff}
+}
+</style>
 </head>
 <body>
 
-<!-- NAV -->
-<header class="site-header" id="siteHeader">
-  <div class="header-inner">
-    <a href="#inicio" class="logo-link" aria-label="Trealva — inicio">
-      <img src="assets/logo/trealva-logo-white.png" alt="Trealva" class="logo logo-light">
-      <img src="assets/logo/trealva-logo-navy.png" alt="Trealva" class="logo logo-dark">
-    </a>
-    <nav class="main-nav" id="mainNav">
-      <a href="#que-somos">Qué somos</a>
-      <a href="#problema">Qué resolvemos</a>
-      <a href="#a-quien-servimos">A quién servimos</a>
-      <a href="#como-trabajamos">Cómo trabajamos</a>
-      <a href="#hablemos" class="nav-cta">Hablemos</a>
+<header>
+  <div class="wrap">
+    <nav aria-label="Principal">
+      <a class="mark" href="#inicio" aria-label="TREALVA, inicio"><img class="logo navy" src="assets/logo/trealva-logo-navy.png" alt="TREALVA"><img class="logo white" src="assets/logo/trealva-logo-white.png" alt="TREALVA"></a>
+      <div class="links">
+        <a href="#la-firma">La firma</a>
+        <a href="#propuesta">Propuesta</a>
+        <a href="#contacto">Contacto</a>
+      </div>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero" id="inicio">
-  <div class="hero-bg">
-    <img src="assets/img/hero-revive.jpg" alt="Interior histórico bañado en luz natural, muros con textura" loading="eager">
-    <div class="hero-scrim"></div>
+<main id="inicio">
+  <div class="wrap hero">
+    <h1>Damos continuidad a empresas mexicanas.</h1>
+    <p>TREALVA adquiere empresas establecidas en el Valle de México y las dirige personalmente, con capital propio y visión de largo plazo.</p>
+    <a class="btn" href="#contacto">Iniciar una conversación</a>
   </div>
-  <div class="hero-content">
-    <p class="eyebrow eyebrow-light">Trealva · Estrategias inmobiliarias de valor</p>
-    <h1>Dar nueva vida<br> a los inmuebles.</h1>
-    <p class="hero-sub">Revivimos los muros. Revivimos la historia.</p>
-    <p class="hero-desc">Identificamos el potencial dormido en cada activo y lo convertimos en resultado real — con visión, disciplina y una estrategia de valor pensada para transformar el medio que nos rodea.</p>
-    <div class="hero-actions">
-      <a href="#hablemos" class="btn btn-primary">Hablemos</a>
-      <a href="#que-somos" class="btn btn-ghost">Qué somos ↓</a>
-    </div>
-  </div>
-</section>
 
-<!-- QUE SOMOS -->
-<section class="section" id="que-somos">
-  <div class="section-inner grid-2">
-    <div class="col-text">
-      <p class="eyebrow">Qué somos realmente</p>
-      <h2>No construimos desde cero.<br>Reimaginamos lo que ya existe.</h2>
-      <p class="body-lg">Trealva es una firma de estrategia inmobiliaria de valor. No compramos ladrillos: compramos potencial sin explotar. Cada muro que reactivamos, cada estructura que reposicionamos, tiene una historia — y nuestro trabajo es escribir su siguiente capítulo.</p>
-      <p class="pull-quote">"Cada muro tiene una historia. Nosotros le damos la que sigue."</p>
-    </div>
-    <div class="col-media">
-      <img src="assets/img/texture-plaster.jpg" alt="Textura de muro antiguo con luz cálida" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<!-- PROBLEMA -->
-<section class="section section-alt" id="problema">
-  <div class="section-inner grid-2 reverse">
-    <div class="col-media">
-      <img src="assets/img/renovation-loft.jpg" alt="Espacio en renovación con luz natural, listo para transformarse" loading="lazy">
-    </div>
-    <div class="col-text">
-      <p class="eyebrow">El problema</p>
-      <h2>Le damos un nuevo<br>propósito al inmobiliario.</h2>
-      <p class="body-lg">Gran parte del inventario inmobiliario existente está mal utilizado, subvalorado o simplemente detenido en el tiempo. La respuesta fácil es demoler y construir de nuevo. La nuestra es distinta: encontramos el propósito que ese activo todavía no ha cumplido, y lo llevamos ahí.</p>
-      <ul class="tag-list">
-        <li>Activos infrautilizados</li>
-        <li>Propósito perdido</li>
-        <li>Potencial dormido</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- A QUIEN SERVIMOS -->
-<section class="section" id="a-quien-servimos">
-  <div class="section-inner">
-    <div class="section-heading">
-      <p class="eyebrow">A quién servimos</p>
-      <h2>En la intersección entre lo que necesita<br>el cliente y lo que necesita el inmueble.</h2>
-    </div>
-    <div class="intersect-wrap">
-      <div class="intersect-diagram" aria-hidden="true">
-        <div class="circle circle-client"><span>Cliente</span></div>
-        <div class="circle circle-property"><span>Inmueble</span></div>
-        <div class="circle-label">TREALVA</div>
+  <section id="la-firma">
+    <div class="wrap">
+      <div class="head">
+        <h2>La firma</h2>
+        <p>Un comprador que opera la empresa, no un fondo que la administra a distancia.</p>
       </div>
-      <p class="body-lg intersect-copy">No buscamos la salida fácil. Buscamos el <em>best &amp; highest use</em> del activo — el uso que genera el mayor valor posible, tanto para el inmueble como para quien lo posee. Exactamente ahí, en esa intersección, es donde trabajamos.</p>
-    </div>
-  </div>
-</section>
-
-<!-- COMO TRABAJAMOS -->
-<section class="section section-alt" id="como-trabajamos">
-  <div class="section-inner">
-    <div class="section-heading">
-      <p class="eyebrow">Cómo trabajamos</p>
-      <h2>Un proceso, cuatro movimientos.</h2>
-    </div>
-    <div class="process-grid">
-      <div class="process-card">
-        <span class="process-num">01</span>
-        <h3>Identificar</h3>
-        <p>Evaluamos activos con potencial dormido: mal utilizados, subvalorados o fuera de foco.</p>
-      </div>
-      <div class="process-card">
-        <span class="process-num">02</span>
-        <h3>Evaluar</h3>
-        <p>Analizamos el best &amp; highest use: qué necesita el mercado, qué necesita el inmueble, qué necesita el cliente.</p>
-      </div>
-      <div class="process-card">
-        <span class="process-num">03</span>
-        <h3>Reposicionar</h3>
-        <p>Ejecutamos la estrategia de valor — uso, forma y propósito, alineados.</p>
-      </div>
-      <div class="process-card">
-        <span class="process-num">04</span>
-        <h3>Generar valor real</h3>
-        <p>El resultado no es solo un inmueble renovado. Es un activo que finalmente cumple su potencial.</p>
+      <div class="three">
+        <article>
+          <h3>Quiénes somos</h3>
+          <p>TREALVA es una firma de inversión privada fundada por Alejandro Álvarez Mitre, ingeniero industrial con experiencia en inversión en empresas privadas. Adquirimos una participación mayoritaria y nos involucramos de lleno en la operación.</p>
+        </article>
+        <article>
+          <h3>Por qué nosotros</h3>
+          <p>Capital propio, decisiones directas y un solo interlocutor de principio a fin. Sabemos lo que cuesta construir una empresa y tratamos cada conversación con absoluta confidencialidad.</p>
+        </article>
+        <article>
+          <h3>Qué buscamos</h3>
+          <p>Empresas tradicionales y rentables, con más de una década de trayectoria, clientes que regresan y un equipo sólido, en servicios a empresas, manufactura ligera y salud.</p>
+        </article>
       </div>
     </div>
-    <div class="process-media">
-      <img src="assets/img/blueprint-hands.jpg" alt="Manos trazando un plano sobre una mesa de madera" loading="lazy">
-      <img src="assets/img/old-meets-new.jpg" alt="Edificio histórico junto a rascacielos moderno" loading="lazy">
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- HABLEMOS -->
-<section class="section contact-section" id="hablemos">
-  <div class="section-inner grid-2">
-    <div class="col-text">
-      <p class="eyebrow">Hablemos</p>
-      <h2>¿Tienes una propuesta<br>para Trealva?</h2>
-      <p class="body-lg">Ya sea que quieras invertir, traernos una propiedad o pipeline para evaluar, o proponer una alianza — este es el lugar para empezar la conversación.</p>
-      <p class="contact-email">alejandro@trealva.com</p>
+  <section id="propuesta">
+    <div class="wrap">
+      <div class="head">
+        <h2>Propuesta</h2>
+        <p>Una manera distinta de pensar en el futuro de su empresa.</p>
+      </div>
+      <table class="cmp">
+        <thead>
+          <tr><th scope="col"></th><th scope="col" class="us">TREALVA</th><th scope="col">Fondos de capital privado</th><th scope="col">Compradores estratégicos</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Horizonte</th><td class="us" data-l="TREALVA">Largo plazo, sin fecha de salida.</td><td data-l="Fondos de capital privado">Venta planeada en pocos años.</td><td data-l="Compradores estratégicos">Integrar la empresa a su grupo.</td></tr>
+          <tr><th scope="row">Su empresa</th><td class="us" data-l="TREALVA">Conserva su nombre, su identidad y su forma de trabajar.</td><td data-l="Fondos de capital privado">Se reorganiza para crecer rápido y revenderse.</td><td data-l="Compradores estratégicos">Se incorpora a otra estructura y con frecuencia pierde su marca.</td></tr>
+          <tr><th scope="row">Colaboradores</th><td class="us" data-l="TREALVA">El equipo se queda y crece con la empresa.</td><td data-l="Fondos de capital privado">Cambios de estructura para cumplir metas de retorno.</td><td data-l="Compradores estratégicos">Posible consolidación de áreas duplicadas.</td></tr>
+          <tr><th scope="row">Quién decide</th><td class="us" data-l="TREALVA">Un dueño que opera y decide directamente.</td><td data-l="Fondos de capital privado">Un comité de inversión.</td><td data-l="Compradores estratégicos">Un corporativo, a veces fuera de México.</td></tr>
+          <tr><th scope="row">Origen del capital</th><td class="us" data-l="TREALVA">Capital propio.</td><td data-l="Fondos de capital privado">Recursos de terceros, con frecuencia apalancados.</td><td data-l="Compradores estratégicos">El balance del corporativo.</td></tr>
+          <tr><th scope="row">Operación y términos</th><td class="us" data-l="TREALVA">Proceso ágil y confidencial; una transición a su ritmo.</td><td data-l="Fondos de capital privado">Proceso formal con estructuras estandarizadas.</td><td data-l="Compradores estratégicos">Proceso largo, sujeto a aprobaciones internas.</td></tr>
+        </tbody>
+      </table>
     </div>
-    <div class="col-form">
-      <form id="contactForm" class="contact-form">
-        <div class="field">
-          <label for="name">Nombre</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="field">
-          <label for="reason">¿Qué nos traes?</label>
-          <select id="reason" name="reason" required>
-            <option value="" disabled selected>Selecciona una opción</option>
-            <option value="Invertir conmigo">Invertir conmigo</option>
-            <option value="Traer una propiedad o pipeline">Traer una propiedad o pipeline</option>
-            <option value="Proponer una alianza">Proponer una alianza</option>
-            <option value="Otro">Otro</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="message">Mensaje</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Enviar</button>
-        <p class="form-note">Al enviar se abrirá tu cliente de correo con el mensaje listo para alejandro@trealva.com</p>
-      </form>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <img src="assets/logo/trealva-logo-white.png" alt="Trealva" class="footer-logo">
-    <p class="footer-tagline">Revivimos los muros. Revivimos la historia.</p>
-    <div class="footer-meta">
-      <a href="mailto:alejandro@trealva.com">alejandro@trealva.com</a>
-      <span>© <span id="year"></span> Trealva</span>
+  <section id="contacto" class="contact">
+    <div class="wrap">
+      <h2>Si está pensando en el futuro de su empresa, conversemos.</h2>
+      <p>Dueños, asesores e intermediarios son bienvenidos. Toda conversación es confidencial.</p>
+      <a class="btn" href="mailto:alejandro@trealva.com?subject=Conversaci%C3%B3n%20con%20TREALVA">Iniciar una conversación</a>
+      <span class="mail">alejandro@trealva.com · Ciudad de México</span>
     </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="mark"><img class="logo navy" src="assets/logo/trealva-logo-navy.png" alt="TREALVA"><img class="logo white" src="assets/logo/trealva-logo-white.png" alt="TREALVA"></span>
+    <span>© 2026 TREALVA. Todos los derechos reservados.</span>
+    <details>
+      <summary>Aviso de privacidad</summary>
+      <p>TREALVA, con contacto en alejandro@trealva.com, usa los datos que usted nos envía solo para responderle y evaluar una posible operación. No los compartimos con terceros sin su consentimiento, salvo con nuestros asesores bajo confidencialidad. Puede pedir el acceso, la corrección o la eliminación de sus datos escribiendo a alejandro@trealva.com.</p>
+    </details>
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
 </body>
 </html>
